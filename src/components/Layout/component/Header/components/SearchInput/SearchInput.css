@@ -1,0 +1,34 @@
+.DivSearchInput{
+    width: 600px;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    border-radius: 15px;
+    border-color: rgb(156, 156, 156);
+    border-style: ridge;
+    border-width: 2px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.InputSearchInput{
+    border: none;
+    background-color: aliceblue;
+    width: 700px;
+    height: 100%;
+}
+
+.ButtonSearchInput{
+    background-color: aliceblue;
+    border: none;
+    width: 30px;
+    height: 35px;
+}
+
+.ImgSearchInput{
+    width: 100%;
+    height: 100%;
+}

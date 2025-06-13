@@ -1,0 +1,43 @@
+.ButtonClient{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 15px;
+    
+    margin-right: 10px;
+}
+
+.imgButtonClient{
+    width: 24px;
+    height: 24px;
+}
+
+.textButtonClient{
+    color: black;
+    font-size: 12px;
+    margin-top: 7px;
+    text-align: center;
+}
+
+.Headerlight{
+    background-color: aliceblue;
+    border-color: aliceblue;
+    color: black;
+}
+
+.Headerlight img{
+    filter: invert(0);
+}
+
+.Headerdark{
+    background-color:  rgb(92, 95, 97);
+    border-color:  rgb(92, 95, 97);
+    color: aliceblue;
+}
+
+.Headerdark img{
+    background-color: rgba(240, 248, 255, 0);
+    filter: invert(1);
+}

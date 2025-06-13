@@ -1,0 +1,38 @@
+.DivCardButton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 210px;
+    width: 100%;
+}
+
+.imgCardButton{
+    height: 100%;
+    width: 100%;
+}
+
+.DivTextCardButton{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background-color: rgba(189, 194, 198, 0.432);
+}
+
+.TextCardButton{
+    margin: 0;
+    font-size: 18px;
+}
+
+.CountCardButton{
+    margin: 0;
+    font-size: 14px;
+    color: rgb(149, 171, 190);
+}

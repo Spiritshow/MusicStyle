@@ -1,0 +1,32 @@
+.Header{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1000;
+    height: 68px;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.linkMain{
+    width: 200px;
+    height: 100%;
+    margin-right: 20px;
+    padding: 15px;
+}
+
+.imgLogo{
+    height: 100%;
+    width: 100%;
+}
+
+.Headerlight{
+    background-color: aliceblue;
+}
+
+.Headerdark{
+    background-color: rgb(92, 95, 97);
+}

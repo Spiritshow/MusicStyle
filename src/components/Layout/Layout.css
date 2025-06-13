@@ -1,0 +1,13 @@
+.DivOutlet{
+    margin-top: 65px;
+}
+
+.light{
+    background-color: aliceblue;
+    color: black;
+}
+
+.dark{
+    background-color: rgb(45, 47, 48);
+    color: aliceblue;
+}
