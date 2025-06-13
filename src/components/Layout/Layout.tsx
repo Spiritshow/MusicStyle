@@ -3,6 +3,7 @@ import Header from "./component/Header/Header";
 import { Outlet } from "react-router";
 import "./Layout.css";
 import { ThemeContext } from "../../router/router";
+import Catalog from "./component/Catalog/Catalog";
 
 const Layout = () =>{
     const [toggleCataloge, setToggleCataloge] = useState<boolean>(false)
@@ -13,7 +14,8 @@ const Layout = () =>{
         <>
             <Header toggleCataloge={toggleCataloge} setToggleCataloge={setToggleCataloge}/>
             <div className={`DivOutlet ${context.theme}`}>
-                <Outlet/>
+                {!toggleCataloge && <Outlet/>}
+                {toggleCataloge && <Catalog/>}
             </div>
         </>
     )

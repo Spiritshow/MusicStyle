@@ -1,0 +1,19 @@
+.DivCatalog{
+    display: flex;
+    flex-direction: row;
+    height: 91vh;
+    width: 100vw;
+}
+
+.DivSectorListCatalog{
+    display: flex;
+    flex-direction: column;
+    width: 378px;
+    flex-shrink: 0;
+    overflow-y: auto;
+}
+
+.DivSectorListTypes{
+    margin-left: 20px;
+    margin-top: 30px;
+}

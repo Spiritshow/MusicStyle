@@ -1,0 +1,23 @@
+
+.DivButtonCategory{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 356px;
+    height: 48px;
+    padding: 10px;
+    background-color: rgba(240, 248, 255, 0);
+}
+
+.DivButtonCategory:hover{
+    background-color: rgb(155, 161, 165);
+}
+
+.TextLink{
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 60px;
+}

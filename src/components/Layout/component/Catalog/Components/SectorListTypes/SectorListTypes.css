@@ -1,0 +1,10 @@
+.SectorListTypes{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0 24px;
+    margin-top: 50px;
+}
+
+.SectorEmpty{
+
+}
