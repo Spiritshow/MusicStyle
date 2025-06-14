@@ -53,6 +53,7 @@ const Router = () => {
                         <Route path="/" element={<Main/>}/>
                         <Route path="/category/:category" />
                         <Route path="/brend/:brend" />
+                        <Route path="/product/:product" />
                     </Route>
                 </Routes>
             </BrowserRouter>

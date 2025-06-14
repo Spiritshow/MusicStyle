@@ -33,3 +33,20 @@ export interface IBrend {
     name: string,
     img: string;
 }
+
+export interface IProduct<T>{
+    id: number,
+    name: string,
+    price: number,
+    img: string,
+    category: string,
+    specifications: T;
+}
+
+export interface ICardProduct{
+    id: number,
+    name: string,
+    price: number,
+    img: string,
+    category: string;
+}
