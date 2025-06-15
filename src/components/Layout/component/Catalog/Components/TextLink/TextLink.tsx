@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router";
 import "./TextLink.css";
+import { useContext } from "react";
+import { toggleCatalogeContext } from "../../../../Layout";
 
 interface ITextLink {
     text: string,
@@ -9,7 +11,10 @@ interface ITextLink {
 export default function TextLink ({text, path}:ITextLink) {
     const navigate = useNavigate();
 
+    const context = useContext(toggleCatalogeContext);
+
     const handleClick = () => {
+        context.ToggleCataloge();
         navigate(`/category/${path}`);
     }
     

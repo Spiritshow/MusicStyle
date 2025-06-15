@@ -4,7 +4,8 @@ import { useParams } from "react-router";
 import type { CategoryMap, CategoryName } from "../../Types/TypesSpec/MapSpec";
 import ListProduct from "./component/ListProduct/ListProduct";
 import CardProduct from "./component/CardProduct/CardProduct";
-
+import "./PageProduct.css";
+import axios from "axios";
 
 const PageProducts = () => {
     
@@ -17,24 +18,35 @@ const PageProducts = () => {
     useEffect(() => {
         if (!cat) return;
 
-        // Пример запроса, замени на реальный fetch
-        const fetchData = async () => {
-            const res = await fetch(`/api/products?category=${cat}`);
-            const data = await res.json();
+        const GetProduct = async () => {
+            try {
+                const res = await axios.get<ICardProduct[]>(`http://localhost:3000/products/${cat}`)
+                console.log(res);
+                setProducts(res.data);
+            } catch (error) {
+                if(axios.isAxiosError(error)){
+                    alert(error.response?.data);
+                }else{
+                    alert(error);
+                }
+            }
+        }
 
-            setProducts(data); // data должен быть ICardProduct[]
-        };
-
-        fetchData();
+        GetProduct();
     }, [cat]);
 
     return(
         <div className="DivPageProduct">
-            <div>
-                {/* Название категории*/}
+            <div className="DivSectorFilter">
+                {/* Компонент фильр*/}
             </div>
-            <div className="DivListProdacts">
-                <ListProduct item={products} renderItem={(product:ICardProduct) => <CardProduct key={product.id} product={product}/>}/>
+            <div className="DivSectorProduct">
+                <div>
+                    {/* Название категории*/}
+                </div>
+                <div className="DivListProdacts">
+                    <ListProduct item={products} renderItem={(product:ICardProduct) => <CardProduct key={product.id} product={product}/>}/>
+                </div>
             </div>
         </div>
     )

@@ -1,9 +1,17 @@
 .DivCardProduct{
-
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 12px 0;
+    padding: 8px;
+    background: #f3f3f7;
+    border-radius: 8px;
 }
 
 .DivImgCardProduct{
-
+    width: 100%;
+    height: auto;
 }
 
 .ImgCardProduct{
@@ -11,27 +19,32 @@
 }
 
 .DivPriceCardProduct{
-
+    display: flex;
+    flex-direction: row;
 }
 
 .PriceCardProduct{
-
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
 }
 
 .DivCategoryCardProduct{
-
+    display: flex;
+    flex-direction: column;
+    gap: 2px 0;
+    line-height: 1.2;
+    flex-grow: 1;
 }
 
 .CategoryCardProduct{
-
-}
-
-.DivNameCardProduct{
-
+    font-size: 14px;
+    color: #667085;
 }
 
 .NameCardProduct{
-
+    font-weight: 500;
+    font-size: 18px;
 }
 
 .DivButtonInBasket{
@@ -39,5 +52,11 @@
 }
 
 .ButtonInBasket{
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: orange;
+    color: aliceblue;
+    border-radius: 15px;
+    text-align: center;
 }

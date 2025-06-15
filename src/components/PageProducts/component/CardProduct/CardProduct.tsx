@@ -1,7 +1,7 @@
-
 import type { FC } from "react";
 import type { ICardProduct} from "../../../../Types/Types";
 import { useNavigate } from "react-router";
+import "./CardProduct.css";
 
 interface ICompCardProduct{
     product: ICardProduct;
@@ -24,12 +24,10 @@ const CardProduct:FC<ICompCardProduct> = ({product}) => {
                 <img src={`/src/assets/${product.img}`} alt={product.name} className="ImgCardProduct"/>
             </div>
             <div className="DivPriceCardProduct">
-                <div className="PriceCardProduct">{product.price}</div>
+                <div className="PriceCardProduct">{product.price}₽</div>
             </div>
             <div className="DivCategoryCardProduct">
                 <div className="CategoryCardProduct">{product.category}</div>
-            </div>
-            <div className="DivNameCardProduct">
                 <div className="NameCardProduct">{product.name}</div>
             </div>
             <div className="DivButtonInBasket">

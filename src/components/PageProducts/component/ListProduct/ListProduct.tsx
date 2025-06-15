@@ -1,3 +1,4 @@
+import "./ListProduct.css";
 
 interface IListProp<T> {
     item: T[];

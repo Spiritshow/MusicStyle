@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import type { ThemWebsite } from "./Them/Them";
 import Layout from "../components/Layout/Layout";
 import Main from "../components/Main/Main";
+import PageProducts from "../components/PageProducts/PageProduct";
 
 
 export interface Context{
@@ -51,7 +52,7 @@ const Router = () => {
                 <Routes>
                     <Route path="/" element={<Layout/>}>
                         <Route path="/" element={<Main/>}/>
-                        <Route path="/category/:category" />
+                        <Route path="/category/:category" element={<PageProducts/>}/>
                         <Route path="/brend/:brend" />
                         <Route path="/product/:product" />
                     </Route>

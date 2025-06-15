@@ -1,0 +1,26 @@
+.DivPageProduct{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+
+.DivSectorFilter{
+    min-width: 320px;
+    flex-direction: column;
+    position: relative;
+    padding: 10px;
+    background-color: black;
+}
+
+
+.DivSectorProduct{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.DivListProdacts{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
