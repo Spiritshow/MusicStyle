@@ -6,6 +6,7 @@ import ListProduct from "./component/ListProduct/ListProduct";
 import CardProduct from "./component/CardProduct/CardProduct";
 import "./PageProduct.css";
 import axios from "axios";
+import SectorFilter from "./component/SectorFilter/SectorFilter";
 
 const PageProducts = () => {
     
@@ -38,7 +39,7 @@ const PageProducts = () => {
     return(
         <div className="DivPageProduct">
             <div className="DivSectorFilter">
-                {/* Компонент фильр*/}
+                <SectorFilter category={cat}/>
             </div>
             <div className="DivSectorProduct">
                 <div>

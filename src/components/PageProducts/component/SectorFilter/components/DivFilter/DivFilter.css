@@ -1,0 +1,18 @@
+.DivBlockFilter{
+    display: flex;
+    flex-direction: column;
+}
+
+.DivHeaderBlockFilter{
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.ButtonFilter{
+    background-color: rgb(63, 37, 175);
+    border-radius: 8px;
+    border-color: rgb(63, 37, 175);
+    color: azure;
+}
