@@ -39,7 +39,7 @@ export interface IProduct<T>{
     id: number,
     name: string,
     price: number,
-    img: string,
+    img: string[],
     category: CategoryName,
     specifications: T;
 }

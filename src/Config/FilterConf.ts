@@ -1,7 +1,7 @@
-import type { FingerboardMaterial, ISpecsAcousticGuitar, Orientation, Wood } from "../../../../../../Types/TypesSpec/SpecAccusticGitar";
-import type { ISpecsClassicalGuitar } from "../../../../../../Types/TypesSpec/SpecClassicGuitar";
-import type { ISpecElectricGuitar } from "../../../../../../Types/TypesSpec/SpecElectricGuitar";
-import type { StringLiteralKeys } from "../HelperType/StringLiteralKeys";
+import type { StringLiteralKeys } from "../components/PageProducts/component/SectorFilter/components/HelperType/StringLiteralKeys";
+import type { FingerboardMaterial, ISpecsAcousticGuitar, Orientation, Wood } from "../Types/TypesSpec/SpecAccusticGitar";
+import type { ISpecsClassicalGuitar } from "../Types/TypesSpec/SpecClassicGuitar";
+import type { ISpecElectricGuitar } from "../Types/TypesSpec/SpecElectricGuitar";
 
 
 

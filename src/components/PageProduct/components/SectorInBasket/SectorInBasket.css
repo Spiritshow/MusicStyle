@@ -1,0 +1,30 @@
+.DivSectorInBasket{
+    display: flex;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 358px;
+    padding: 20px;
+}
+
+.CardInBasket{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(191, 196, 202);
+    max-height: 136px;
+    border-radius: 15px;
+}
+
+.TextPrice{
+    font-weight: 700;
+    font-size: 27px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.DivButtonInBasket{
+    display: flex;
+    justify-content: left;
+}
+

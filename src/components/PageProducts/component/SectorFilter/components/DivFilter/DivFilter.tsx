@@ -1,9 +1,10 @@
 import { useState } from "react";
 import type { CategoryName } from "../../../../../../Types/TypesSpec/MapSpec";
 import Filter from "../Filter/Filter";
-import FilterConf from "../FilterConf/FilterConf";
+import FilterConf from "../../../../../../Config/FilterConf";
 import type { StringLiteralKeys } from "../HelperType/StringLiteralKeys";
 import "./DivFilter.css";
+
 
 
 

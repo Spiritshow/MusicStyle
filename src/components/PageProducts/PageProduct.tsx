@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import type { ICardProduct } from "../../Types/Types";
 import { useParams } from "react-router";
-import type { CategoryMap, CategoryName } from "../../Types/TypesSpec/MapSpec";
+import type { CategoryName } from "../../Types/TypesSpec/MapSpec";
 import ListProduct from "./component/ListProduct/ListProduct";
 import CardProduct from "./component/CardProduct/CardProduct";
 import "./PageProduct.css";
-import axios from "axios";
 import SectorFilter from "./component/SectorFilter/SectorFilter";
+import { RequestProducts } from "../RequestApi/RequestProducts";
 
 const PageProducts = () => {
     
@@ -18,22 +18,7 @@ const PageProducts = () => {
     
     useEffect(() => {
         if (!cat) return;
-
-        const GetProduct = async () => {
-            try {
-                const res = await axios.get<ICardProduct[]>(`http://localhost:3000/products/${cat}`)
-                console.log(res);
-                setProducts(res.data);
-            } catch (error) {
-                if(axios.isAxiosError(error)){
-                    alert(error.response?.data);
-                }else{
-                    alert(error);
-                }
-            }
-        }
-
-        GetProduct();
+        RequestProducts({cat, setProducts});
     }, [cat]);
 
     return(

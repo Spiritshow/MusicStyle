@@ -4,6 +4,7 @@ import type { ThemWebsite } from "./Them/Them";
 import Layout from "../components/Layout/Layout";
 import Main from "../components/Main/Main";
 import PageProducts from "../components/PageProducts/PageProduct";
+import PageProduct from "../components/PageProduct/PageProdact";
 
 
 export interface Context{
@@ -54,7 +55,7 @@ const Router = () => {
                         <Route path="/" element={<Main/>}/>
                         <Route path="/category/:category" element={<PageProducts/>}/>
                         <Route path="/brend/:brend" />
-                        <Route path="/product/:product" />
+                        <Route path="/product/:idProduct" element={<PageProduct/>}/>
                     </Route>
                 </Routes>
             </BrowserRouter>
