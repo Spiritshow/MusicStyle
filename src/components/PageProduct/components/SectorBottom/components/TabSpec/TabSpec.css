@@ -1,0 +1,25 @@
+.DivTabSpec{
+    columns: 2;
+    column-gap: 16px;
+    max-width: 90vw;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.TabSpec{
+    padding-left: 30px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.DivHeaderTabSpec{
+    width: 165px;
+    margin-right: 15px;
+}
+
+.DivValueTabSpec{
+    font-weight: 700
+}

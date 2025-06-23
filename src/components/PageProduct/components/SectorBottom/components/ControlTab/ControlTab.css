@@ -1,0 +1,35 @@
+.DivControlTab{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    border-top: 2px;
+    border-bottom: 2px;
+    border-color: gray;
+    border-style: ridge;
+    left: 0;
+    right: 0;
+    height: 80px;
+}
+
+.ButtonControlTabDiscription{
+    margin-left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    color: gray;
+}
+
+.ButtonControlTabSpec{
+    margin-left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+}
+
+.active{
+    color: rgb(52, 52, 209);
+}

@@ -41,6 +41,7 @@ export interface IProduct<T>{
     price: number,
     img: string[],
     category: CategoryName,
+    discription: string,
     specifications: T;
 }
 
@@ -51,3 +52,7 @@ export interface ICardProduct{
     img: string,
     category: CategoryName;
 }
+
+export type СonditionBottom = "Description" | "Specification";
+
+

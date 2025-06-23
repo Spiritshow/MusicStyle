@@ -1,0 +1,8 @@
+.DivPage{
+    padding-top: 20px;
+}
+
+.DivProduct{
+    display: flex;
+    flex-direction: row;
+}

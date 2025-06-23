@@ -11,14 +11,14 @@ const SectorSpec = ({spec}: {spec:CategoryMap[CategoryName] | undefined}) => {
                 {spec && Object.keys(spec).map((key) => {
                     const typeKey = key as keyof typeof spec;
                     return(
-                    <div key={typeKey} className="DivFieldSpec">
-                        <div className="DivHeaderFieldSpec">
-                            {typeKey}:
+                        <div key={typeKey} className="DivFieldSpec">
+                            <div className="DivHeaderFieldSpec">
+                                {typeKey}:
+                            </div>
+                            <div className="DivValueFieldSpec">
+                                {spec[typeKey]}
+                            </div>
                         </div>
-                        <div className="DivValueFieldSpec">
-                            {spec[typeKey]}
-                        </div>
-                    </div>
                     )})
                 }
             </div>
