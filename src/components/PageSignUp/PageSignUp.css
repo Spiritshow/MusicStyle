@@ -1,0 +1,41 @@
+.DivPageSignUp{
+    overflow: hidden;
+    height: 91vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.PageSignUp{
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.HeaderSignUp{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.ListSignUp{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.ControlButtonSignUp{
+    display: flex;
+    flex-direction: row;
+}
+
+.ButtonInMain{
+    width: 150px;
+}
+
+.ButtonSignUp{
+    margin-left: 20px;
+    width: 210px;
+}

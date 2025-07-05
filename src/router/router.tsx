@@ -5,6 +5,10 @@ import Layout from "../components/Layout/Layout";
 import Main from "../components/Main/Main";
 import PageProducts from "../components/PageProducts/PageProduct";
 import PageProduct from "../components/PageProduct/PageProdact";
+import LK from "../components/LK/LK";
+import GuardRoute from "./GuardRouter";
+import PageLogin from "../components/PageLogin/PageLogin";
+import PageSignUp from "../components/PageSignUp/PageSignUp";
 
 
 export interface Context{
@@ -56,6 +60,9 @@ const Router = () => {
                         <Route path="/category/:category" element={<PageProducts/>}/>
                         <Route path="/brend/:brend" />
                         <Route path="/product/:idProduct" element={<PageProduct/>}/>
+                        <Route path="/LK" element={<GuardRoute element={<LK/>}/>}/>
+                        <Route path="/login" element={<PageLogin/>}/>
+                        <Route path="/signUp" element={<PageSignUp/>}/>
                     </Route>
                 </Routes>
             </BrowserRouter>

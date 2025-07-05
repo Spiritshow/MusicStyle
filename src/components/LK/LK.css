@@ -1,0 +1,23 @@
+.DivLK{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.DivSidebarLK{
+    height: 100%;
+    padding: 20px;
+    border-width: 0px;
+    border-right: 2px;
+    border-color: rgba(128, 128, 128, 0.479);
+    border-style:outset;
+}
+
+.Info{
+    padding: 20px;
+    padding-left: 60px;
+    height: 100%;
+}

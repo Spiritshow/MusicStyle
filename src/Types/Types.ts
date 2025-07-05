@@ -55,4 +55,14 @@ export interface ICardProduct{
 
 export type СonditionBottom = "Description" | "Specification";
 
+export type TControlSidebar = "PersonalInfo" | "HistoryBuy";
+
+export interface IPersonalInfo{
+    FIO: string,
+    nickname: string,
+    numberPhone: Number, 
+    address: string, 
+    email: string,
+    birthday: Date
+}
 

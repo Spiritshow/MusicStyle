@@ -1,0 +1,58 @@
+.DivEditPersonalInfo{
+    display: flex;
+    justify-content: center;
+}
+
+.CardEditPersonalInfo{
+    position: absolute;
+    top: 80px;
+    width: 600px;
+    height: 350px;
+    border-radius: 15px;
+    background-color: aliceblue;
+    padding: 30px;
+    z-index: 1001;
+}
+
+.HeaderEditPersonalInfo{
+    padding-bottom: 10px;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.ListEditPersonalInfo{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    height: 250px;
+    padding-bottom: 20px;
+}
+
+.DivButtonEditPersonalInfo{
+    display: flex;
+    justify-content: right;
+}
+
+.ButtonEditPersonalInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+    color: aliceblue;
+    background-color: rgb(51, 51, 193);
+    width: 120px;
+    height: 36px;
+    margin-bottom: 15px;
+}
+
+.Background{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(128, 128, 128, 0.345);
+    z-index: 1000;
+}

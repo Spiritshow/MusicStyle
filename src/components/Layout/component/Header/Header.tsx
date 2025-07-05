@@ -26,7 +26,7 @@ const Header: FC<IHeader> = ({toggleCataloge, setToggleCataloge}) => {
     }
 
     const handleClickProfile = () => {
-        navigate("/Profile");
+        navigate("/LK");
     }
 
     const handleClickBasket = () => {
