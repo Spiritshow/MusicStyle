@@ -1,22 +1,29 @@
-import { useState, type FC } from "react";
+import { useEffect, useState, type FC } from "react";
 import ListProp from "../../../../componentsControl/ListProp/ListProp";
-import { catalogConf } from "../../../../Config/CatalogConf";
-import type { ICategory } from "../../../../Types/Types";
 import "./Catalog.css";
 import ButtonCategory from "./Components/ButtonCategory/ButtonCategory";
-import SectorListTypes from "./Components/SectorListTypes/SectorListTypes";
+import SectorListSubcategory from "./Components/SectorListTypes/SectorListTypes";
+
+import type { ICategory, ISubcategory } from "./Components/helpers/Types";
+import Responsegetcategors from "./Components/helpers/ResponseGetCategors";
+
 
 
 const Catalog: FC = () => {
-    const [items, setItem] = useState<ICategory>();
+    const [category, setCategory] = useState<ICategory[]>()
+    const [subcategory, setSubcategory] = useState<ISubcategory[]>();
+
+    useEffect(() => {
+        Responsegetcategors(setCategory);
+    }, []);
 
     return(
         <div className="DivCatalog">
             <div className="DivSectorListCatalog">
-                <ListProp item={catalogConf} renderItem={(chapter: ICategory) => <ButtonCategory prop={chapter} func={setItem}/>}/>
+                {category && <ListProp item={category} renderItem={(chapter: ICategory) => <ButtonCategory category={chapter} setSubcategory={setSubcategory}/>}/>}
             </div>
             <div className="DivSectorListTypes">
-                <SectorListTypes prop={items}/>
+                <SectorListSubcategory subcategory={subcategory}/>
             </div>
         </div>
     )

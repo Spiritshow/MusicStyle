@@ -21,8 +21,8 @@ const PersonalInfo = () => {
     const [error, setError] = useState<string>();
     useEffect(() => {
         axios
-            .get<IPersonalInfo>("http://localhost:3000/api/userInfo", {
-                withCredentials: true, // 🔑 ОБЯЗАТЕЛЬНО для отправки cookie
+            .get<IPersonalInfo>("http://localhost:3000/userInfo", {
+                withCredentials: true,
             })
             .then((res) => {
                 setUserInfo(res.data);
@@ -59,12 +59,17 @@ const PersonalInfo = () => {
                     </div>
                 </div>
                 <div className="ListPersonalInfo">
-                    {userInfo && Object.entries(userInfo).map(([key, value]) => (
-                        <div key={key} className="RowInfo">
-                            <div className="KeyInfo"><strong>{key}:</strong></div> 
-                            <div className="ValueInfo">{value instanceof Date ? value.toLocaleDateString() : value.toString()}</div>
-                        </div>
-                    ))}
+                    {userInfo && Object.entries(userInfo).map(([key, value]) => {
+                        if(key === "id") return;
+                        else{ 
+                            return(     
+                                <div key={key} className="RowInfo">
+                                    <div className="KeyInfo"><strong>{key}:</strong></div> 
+                                    <div className="ValueInfo">{value instanceof Date ? value.toLocaleDateString() : value.toString()}</div>
+                                </div>
+                            )
+                        }
+                    })}
                 </div>
             </div>
         </>

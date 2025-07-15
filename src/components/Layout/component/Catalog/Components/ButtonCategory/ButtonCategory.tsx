@@ -1,22 +1,24 @@
 import type { FC } from "react";
-import type { ICategory } from "../../../../../../Types/Types";
+
 import "./ButtonCategory.css";
+import type { ICategory, ISubcategory } from "../helpers/Types";
+import ResponseGetSubcategors from "../helpers/ResponseGetSubcategors";
 
 interface IButtonCategory{
-    prop: ICategory,
-    func: (prop:ICategory) => void;
+    category: ICategory,
+    setSubcategory: (subcategory: ISubcategory[]) => void;
 }
 
 
-const ButtonCategory: FC<IButtonCategory> = ({prop, func}) =>{
-    
+const ButtonCategory: FC<IButtonCategory> = ({category, setSubcategory}) =>{
+    const id_category = category.id;
     const handleClick = () => {
-        func(prop);
+        ResponseGetSubcategors({id_category, setSubcategory})
     } 
 
     return(
         <div onClick={handleClick} className="DivButtonCategory">
-            <div className="TextLink">{prop.text}</div>
+            <div className="TextLink">{category.name}</div>
         </div>
     )
 } 

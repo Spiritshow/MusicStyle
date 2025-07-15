@@ -5,4 +5,5 @@ export const fields = [
   { name: "address", label: "Адрес", type: "text" },
   { name: "email", label: "Email", type: "email" },
   { name: "birthday", label: "Дата рождения", type: "date" },
+  { name: "password", label: "пароль", type: "text" }
 ];

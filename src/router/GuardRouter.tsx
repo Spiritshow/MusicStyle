@@ -11,7 +11,7 @@ const GuardRoute = ({ element }: Props) => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
 
     useEffect(() => {
-        axios.get("http://localhost:3000/api/checkCookie", { withCredentials: true })
+        axios.get("http://localhost:3000/checkCookie", { withCredentials: true })
             .then((res) => setIsAuthenticated(true))
             .catch(() => setIsAuthenticated(false))
             .finally(() => setLoading(false));

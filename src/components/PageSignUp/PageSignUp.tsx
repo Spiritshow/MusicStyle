@@ -1,22 +1,32 @@
 import { useContext, useState } from "react";
 import "./PageSignUp.css";
-import type { IPersonalInfo } from "../../Types/Types";
 import { fields } from "../../Config/ConfigProfile";
 import LabelPersanalInfo from "../LK/components/PersonalInfo/components/CompEditPersonalInfo/components/LablePersanalInfo/LabelPersanalInfo";
 import { useNavigate } from "react-router";
 import axios from "axios";
 import { ThemeContext } from "../../router/router";
 
+interface ISignUpUser {
+    FIO: string;
+    nickname: string;
+    numberPhone: Number;
+    address: string;
+    email: string;
+    birthday: Date;
+    password: string;
+}
+
 const PageSignUp = () => {
     const constext = useContext(ThemeContext);
 
-    const [formData, setFormData] = useState<IPersonalInfo>({
+    const [formData, setFormData] = useState<ISignUpUser>({
         FIO: "",
         nickname: "",
         numberPhone: 0,
         address: "",
         email: "",
-        birthday: new Date
+        birthday: new Date,
+        password: ""
     });
     const navigate = useNavigate();
     const [error, setError] = useState();
@@ -36,9 +46,9 @@ const PageSignUp = () => {
     };
     
     const handleSubmit = () => {
-        axios.post("/api/SignUp", formData, {withCredentials: true})
+        axios.post("http://localhost:3000/SignUp", formData, {withCredentials: true})
         .then(() => navigate("/"))
-        .catch((err) => setError(err))
+        .catch((err) => setError(err.message))
     };
 
     const handleMain = () => {
@@ -59,12 +69,13 @@ const PageSignUp = () => {
                             value={
                                 field.name === "birthday"
                                 ? formData.birthday.toISOString().split("T")[0]
-                                : String(formData[field.name as keyof IPersonalInfo])
+                                : String(formData[field.name as keyof ISignUpUser])
                             }
                             onChange={handleChange}
                         />
                     ))}
                 </div>
+                <div>{error}</div>
                 <div className="ControlButtonSignUp">
                     <button className={`ButtonInMain Background${constext.theme}`} onClick={handleMain}>На главную</button>
                     <button className={`ButtonSignUp Background${constext.theme}`} onClick={handleSubmit}>Зарегистрироваться</button>

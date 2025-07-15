@@ -29,7 +29,7 @@ const PageLogin = () => {
     }
 
     const handleLogin = () => {
-        axios.post("http://localhost:3000/api/login",auth,{ withCredentials: true })
+        axios.post("http://localhost:3000/login",auth,{ withCredentials: true })
         .then(() => navigate("/LK"))
         .catch((err) => {setError(err)})
     } 

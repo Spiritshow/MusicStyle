@@ -55,7 +55,7 @@ export interface ICardProduct{
 
 export type СonditionBottom = "Description" | "Specification";
 
-export type TControlSidebar = "PersonalInfo" | "HistoryBuy";
+export type TControlSidebar = "PersonalInfo" | "HistoryBuy" | "AdminPanel";
 
 export interface IPersonalInfo{
     FIO: string,

@@ -1,9 +1,10 @@
 import axios from "axios";
-import type { ICardProduct } from "../../Types/Types";
-import type { CategoryName } from "../../Types/TypesSpec/MapSpec";
+import type { ICardProduct } from "../PageProducts/helper/Types";
+
+
 
 interface RequestProducts {
-    cat: CategoryName, 
+    cat: string, 
     setProducts: (cardProdacts: ICardProduct[]) => void
 }
 

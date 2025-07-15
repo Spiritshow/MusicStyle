@@ -3,6 +3,7 @@ import "./LK.css";
 import SidebarLK from "./components/SidebarLK/SidebarLK";
 import type { TControlSidebar } from "../../Types/Types";
 import PersonalInfo from "./components/PersonalInfo/PersonalInfo";
+import AdminPanel from "./components/AdminPanel/AdminPanel";
 
 
 
@@ -17,6 +18,7 @@ const LK = () => {
             <div className="Info">
                 {controlSidebar == "PersonalInfo" && <PersonalInfo/>}
                 {controlSidebar == "HistoryBuy"}
+                {controlSidebar == "AdminPanel" && <AdminPanel/>}
             </div>
         </div>
     )

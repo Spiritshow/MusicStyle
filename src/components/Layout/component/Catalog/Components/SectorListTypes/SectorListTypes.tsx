@@ -1,19 +1,19 @@
 import type { FC } from "react";
 import "./SectorListTypes.css";
-import type { ICategory, ITypes } from "../../../../../../Types/Types";
 import TextLink from "../TextLink/TextLink";
+import type { ISubcategory } from "../helpers/Types";
 
-interface SectorListTypes{
-    prop: ICategory | undefined;
+interface ISectorListSubcategory{
+    subcategory: ISubcategory[] | undefined;
 }
 
-const SectorListTypes: FC<SectorListTypes> = ({prop}) => {
-    if(typeof prop === "undefined") return(<div className="SectorEmpty"></div>)
+const SectorListSubcategory: FC<ISectorListSubcategory> = ({subcategory}) => {
+    if(typeof subcategory === "undefined") return(<div className="SectorEmpty"></div>)
     return(
         <div className="SectorListTypes">
-            {prop.types.map((itemtype: ITypes) => <TextLink text={itemtype.text} path={itemtype.path}/>)}
+            {subcategory.map((item: ISubcategory) => <TextLink text={item.name} path={item.id}/>)}
         </div>
     )
 }
 
-export default SectorListTypes;
+export default SectorListSubcategory;
