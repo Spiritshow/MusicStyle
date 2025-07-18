@@ -17,7 +17,7 @@ const CompChangePassword = ({handleClickChangePassword}: ICompChangePassword) =>
     const handleChangePassword = async() => {
         try {
             const response = await axios.post(
-                "/api/changePassword",
+                "http://localhost:3000/changePassword",
                 { newPassword: value },
                 { withCredentials: true }
             );

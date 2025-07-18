@@ -8,15 +8,14 @@ const TabSpec = () => {
     const spec = useContext(ProductContext).product?.specifications;
     return(
         <div className="DivTabSpec">
-            {spec && Object.keys(spec).map((key) => {
-                    const typeKey = key as keyof typeof spec;
+            {spec && spec.map((s) => {
                     return(
-                        <div key={typeKey} className="TabSpec">
+                        <div key={s.name} className="TabSpec">
                             <div className="DivHeaderTabSpec">
-                                {typeKey}:
+                                {s.name}:
                             </div>
                             <div className="DivValueTabSpec">
-                                {spec[typeKey]}
+                                {s.value}
                             </div>
                         </div>
                     )})

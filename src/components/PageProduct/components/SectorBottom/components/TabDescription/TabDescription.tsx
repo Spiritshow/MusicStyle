@@ -9,7 +9,7 @@ const TabDescription = () => {
     const context = useContext(ProductContext);
 
     useEffect(() => {
-        setDescription(context.product?.discription)
+        setDescription(context.product?.description)
     }, [])
 
     return(

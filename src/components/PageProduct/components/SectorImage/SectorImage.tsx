@@ -22,13 +22,13 @@ const SectorImage = ({image}: {image: string[] | undefined}) => {
                 {image && image.map((img) => {
                     return(
                         <div className="DivImg">
-                            <img src={`/src/assets/${img}`} onClick={() => handleSwitch(img)}className="ImgSectorImage"/>
+                            <img src={`http://localhost:3000/uploads/${img}`} onClick={() => handleSwitch(img)}className="ImgSectorImage"/>
                         </div>    
                     )
                 })}
             </div>
             <div className="DivMainImage">
-                <img src={`/src/assets/${mainImg}`} className="MainImage"/>
+                <img src={`http://localhost:3000/uploads/${mainImg}`} className="MainImage"/>
             </div>
         </div>
     )

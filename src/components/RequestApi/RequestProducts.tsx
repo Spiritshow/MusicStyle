@@ -1,16 +1,17 @@
 import axios from "axios";
-import type { ICardProduct } from "../PageProducts/helper/Types";
+import type { ICardProduct } from "../../Types/Types";
+
 
 
 
 interface RequestProducts {
-    cat: string, 
-    setProducts: (cardProdacts: ICardProduct[]) => void
+    subcategory: number, 
+    setProducts: React.Dispatch<React.SetStateAction<ICardProduct[]>>
 }
 
-export const RequestProducts = async ({cat, setProducts}: RequestProducts) => {
+export const RequestProducts = async ({subcategory, setProducts}: RequestProducts ) => {
     try {
-        const res = await axios.get<ICardProduct[]>(`http://localhost:3000/products/${cat}`)
+        const res = await axios.get<ICardProduct[]>(`http://localhost:3000/products/${subcategory}`)
         setProducts(res.data);
     } catch (error) {
         if(axios.isAxiosError(error)){

@@ -2,7 +2,8 @@ import { useState } from "react";
 import "./CompEditPersonalInfo.css";
 import LabelPersanalInfo from "./components/LablePersanalInfo/LabelPersanalInfo";
 import type { IPersonalInfo } from "../../../../../../Types/Types";
-import { fields } from "../../../../../../Config/ConfigProfile";
+import { fieldsUserInfo } from "../../../../../../Config/ConfigProfile";
+import axios from "axios";
 
 interface ICompEditPersonalInfo{
     handleClickEdit: () => void;
@@ -10,7 +11,7 @@ interface ICompEditPersonalInfo{
 }
 
 const CompEditPersonalInfo = ({handleClickEdit,initialInfo}:ICompEditPersonalInfo) => {
-    
+    const [error, setError] = useState<string>();
     const [formData, setFormData] = useState<IPersonalInfo>({
         ...initialInfo,
         birthday: new Date(initialInfo.birthday),
@@ -30,8 +31,24 @@ const CompEditPersonalInfo = ({handleClickEdit,initialInfo}:ICompEditPersonalInf
         }));
     };
     
-    const handleSubmit = () => {
-        console.log("Сохранённые данные:", formData);
+    const handleSubmit = async() => {
+        try {
+            const response = await axios.post(
+                "http://localhost:3000/changeuserinfo",
+                formData,
+                { withCredentials: true }
+            );
+
+        } catch (err: any) {
+            if (err.response) {
+                setError(err.response.data.message);
+                alert(err.response.data.message)
+            } else {
+                setError("Ошибка запроса");
+                alert("Ошибка запроса")
+            }
+        }
+
         handleClickEdit();
     };
 
@@ -42,7 +59,8 @@ const CompEditPersonalInfo = ({handleClickEdit,initialInfo}:ICompEditPersonalInf
                     Редактирование профиля
                 </div>
                 <div className="ListEditPersonalInfo">
-                    {fields.map((field) => (
+                    {fieldsUserInfo.map((field) => (
+
                         <LabelPersanalInfo
                         key={field.name}
                         name={field.name}

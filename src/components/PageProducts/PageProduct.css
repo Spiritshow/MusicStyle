@@ -1,10 +1,36 @@
 .DivPageProduct{
     display: flex;
     flex-direction: row;
-    width: 100vw;
+    width: 99vw;
+    height: 100vh;
+}
+
+.BackgroundPageProductlight{
+    background-color: aliceblue;
+    color: black;
+}
+
+.BackgroundPageProductdark{
+    background-color: rgb(59, 59, 59);
+    color: aliceblue
+}
+
+.TextHeaderSubcategory{
+    font-weight: 400;
+    font-size: 20px;
+    color: rgb(137, 137, 137);
+    padding-left: 20px;
+}
+
+.TextNameSubcategory{
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 40px;
+    padding-left: 40px;
 }
 
 .DivSectorFilter{
+    margin-top: 20px;
     min-width: 320px;
     flex-direction: column;
     position: relative;

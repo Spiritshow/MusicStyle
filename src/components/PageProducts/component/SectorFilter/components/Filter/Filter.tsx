@@ -1,37 +1,76 @@
-import type { StringLiteralKeys } from "../HelperType/StringLiteralKeys";
+import { useEffect, useState } from "react";
 import "./Filter.css";
+import { RequestOptionsSpec } from "./helpers/RequestOptionsSpec";
+import type { IFilterSpec, ISpecValues } from "../../SectorFilter";
 
-interface FilterProps<T> {
-  values: Partial<T>;
-  onChange: (updated: Partial<T>) => void;
-  options: { [K in StringLiteralKeys<T>]: readonly T[K][] }; 
+interface IFilter {
+  values: IFilterSpec[];
+  onChange: React.Dispatch<React.SetStateAction<IFilterSpec[]>>;
+  subcategory: number; 
 }
 
-function Filter<T extends object>({ values, onChange, options }: FilterProps<T>) {
-  const handleSelect = <K extends StringLiteralKeys<T>>(key: K, value: T[K]) => {
-    onChange({ ...values, [key]: value });
-  };
+export interface IOptions {
+  name: string;
+  name_db: string;
+  value: ISpecValues[]
+}
 
-  return (
+const Filter = ({ values, onChange, subcategory}: IFilter) => {
+    const [optionsSpec, setOptionsSpec] = useState<IOptions[]>([]);
+  
+
+    useEffect(() => {
+        RequestOptionsSpec(subcategory, setOptionsSpec);
+    },[])
+
+    const handleSelect = (option: IOptions, selectedValue: ISpecValues) => {
+        onChange(prev => {
+            const filtered = prev.filter(item => item.name_db !== option.name_db);
+            
+            return [...filtered, { 
+                name: option.name, 
+                name_db: option.name_db, 
+                value: selectedValue 
+            }];
+        });
+    };
+
+    const handleRemoveFilter = (name_db: string) => {
+        onChange(prev => prev.filter(item => item.name_db !== name_db));
+    };
+
+    const getSelectedValue = (name_db: string) => {
+        return values.find(item => item.name_db === name_db)?.value;
+    };
+
+  return(
     <div className="DivFilter">
-      {(Object.keys(options) as StringLiteralKeys<T>[]).map((key) => (
-        <div key={String(key)} className="FieldFilter">
-          <div className="DivHeaderFieldFilter">
-            <label className="HeaderFieldFilter">{String(key)}</label>
-          </div>
-          <select className="Select"
-            value={String(values[key] ?? '')}
-            onChange={(e) => handleSelect(key, e.target.value as T[typeof key])}
-          >
-            <option value="">Не выбрано</option>
-            {options[key].map((val) => (
-              <option key={String(val)} value={String(val)} className="OptionFilter">{String(val)}</option>
-            ))}
-          </select>
-        </div>
-      ))}
+        {optionsSpec.length > 0 && optionsSpec.map((option) => (
+            <div key={option.name_db} className="FieldFilter">
+                <div className="DivHeaderFieldFilter">
+                    <label className="HeaderFieldFilter">{option.name}</label>
+                </div>
+                <select className="Select"
+                    value={getSelectedValue(option.name_db)?.id || ''}
+                    onChange={(e) => {
+                        const selectedId = Number(e.target.value);
+                        const selectedValue = option.value.find(v => v.id === selectedId);
+                        if (selectedValue) {
+                            handleSelect(option, selectedValue);
+                        }
+                    }}>
+                    <option value="">Не выбрано</option>
+                    {option.value.map((val) => (
+                        <option key={val.id} value={val.id} className="OptionFilter">{val.name}</option>
+                    ))}
+                </select>
+                {getSelectedValue(option.name_db) && (
+                    <button onClick={() => handleRemoveFilter(option.name_db)} className="ButtonRemoveFilter">х</button>
+                )}
+            </div>
+        ))}
     </div>
-  );
+  )
 }
 
 export default Filter;

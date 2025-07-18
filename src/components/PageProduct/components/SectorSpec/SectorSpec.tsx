@@ -1,22 +1,21 @@
-import type { CategoryMap, CategoryName } from "../../../../Types/TypesSpec/MapSpec";
+import type { ISpecProduct } from "../../../../Types/Types";
 import "./SectorSpec.css";
 
-const SectorSpec = ({spec}: {spec:CategoryMap[CategoryName] | undefined}) => {
+const SectorSpec = ({spec}: {spec: ISpecProduct[] | undefined}) => {
     return(
         <div className="DivSectorSpec">
             <div className="CardSpec">
                 <div className="DivHeaderSpec">
                     Храрактеристики
                 </div>
-                {spec && Object.keys(spec).map((key) => {
-                    const typeKey = key as keyof typeof spec;
+                {spec && spec.map((s) => {
                     return(
-                        <div key={typeKey} className="DivFieldSpec">
+                        <div key={s.name} className="DivFieldSpec">
                             <div className="DivHeaderFieldSpec">
-                                {typeKey}:
+                                {s.name}: 
                             </div>
                             <div className="DivValueFieldSpec">
-                                {spec[typeKey]}
+                                {s.value}
                             </div>
                         </div>
                     )})

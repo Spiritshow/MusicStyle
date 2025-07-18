@@ -1,4 +1,3 @@
-import type { CategoryName } from "./TypesSpec/MapSpec";
 
 
 export interface ICardButton {
@@ -35,14 +34,19 @@ export interface IBrend {
     img: string;
 }
 
-export interface IProduct<T>{
+export interface ISpecProduct{
+    name: string;
+    value: string;
+}
+
+export interface IProduct{
     id: number,
     name: string,
     price: number,
     img: string[],
-    category: CategoryName,
-    discription: string,
-    specifications: T;
+    subcategoryname: string,
+    description: string,
+    specifications: ISpecProduct[];
 }
 
 export interface ICardProduct{
@@ -50,7 +54,7 @@ export interface ICardProduct{
     name: string,
     price: number,
     img: string,
-    category: CategoryName;
+    subcategory: number;
 }
 
 export type СonditionBottom = "Description" | "Specification";

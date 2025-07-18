@@ -5,8 +5,17 @@
     height: 100%;
     gap: 12px 0;
     padding: 8px;
-    background: #f3f3f7;
     border-radius: 8px;
+}
+
+.BackgroundCardProductlight{
+    background-color: #ebebf9;
+    color: black;
+}
+
+.BackgroundCardProductdark{
+    background-color: #555558;
+    color: #f3f3f7;
 }
 
 .DivImgCardProduct{
@@ -15,7 +24,9 @@
 }
 
 .ImgCardProduct{
-
+    height: 260px;
+    width: 100%;
+    border-radius: 15px;
 }
 
 .DivPriceCardProduct{

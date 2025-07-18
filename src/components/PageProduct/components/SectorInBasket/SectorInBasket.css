@@ -12,8 +12,15 @@
     width: 100%;
     padding: 20px;
     background-color: rgb(191, 196, 202);
-    max-height: 136px;
+    max-height: 145px;
     border-radius: 15px;
+}
+
+.TextNameProduct{
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: black;
 }
 
 .TextPrice{

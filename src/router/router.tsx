@@ -9,6 +9,7 @@ import LK from "../components/LK/LK";
 import GuardRoute from "./GuardRouter";
 import PageLogin from "../components/PageLogin/PageLogin";
 import PageSignUp from "../components/PageSignUp/PageSignUp";
+import PageBasket from "../components/PageBasket/PageBasket";
 
 
 export interface Context{
@@ -57,12 +58,13 @@ const Router = () => {
                 <Routes>
                     <Route path="/" element={<Layout/>}>
                         <Route path="/" element={<Main/>}/>
-                        <Route path="/category/:category" element={<PageProducts/>}/>
+                        <Route path="/category/:subcategory" element={<PageProducts/>}/>
                         <Route path="/brend/:brend" />
                         <Route path="/product/:idProduct" element={<PageProduct/>}/>
                         <Route path="/LK" element={<GuardRoute element={<LK/>}/>}/>
                         <Route path="/login" element={<PageLogin/>}/>
                         <Route path="/signUp" element={<PageSignUp/>}/>
+                        <Route path="/basket" element={<GuardRoute element={<PageBasket/>}/>}/>
                     </Route>
                 </Routes>
             </BrowserRouter>

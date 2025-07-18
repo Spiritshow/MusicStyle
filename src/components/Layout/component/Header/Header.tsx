@@ -30,7 +30,7 @@ const Header: FC<IHeader> = ({toggleCataloge, setToggleCataloge}) => {
     }
 
     const handleClickBasket = () => {
-        navigate("/Basket");
+        navigate("/basket");
     }
 
     return(

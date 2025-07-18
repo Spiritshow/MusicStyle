@@ -7,3 +7,12 @@ export const fields = [
   { name: "birthday", label: "Дата рождения", type: "date" },
   { name: "password", label: "пароль", type: "text" }
 ];
+
+export const fieldsUserInfo = [
+  { name: "fio", label: "ФИО", type: "text" },
+  { name: "nickname", label: "Никнейм", type: "text" },
+  { name: "numberphone", label: "Телефон", type: "number" },
+  { name: "address", label: "Адрес", type: "text" },
+  { name: "email", label: "Email", type: "email" },
+  { name: "birthday", label: "Дата рождения", type: "date" },
+];
