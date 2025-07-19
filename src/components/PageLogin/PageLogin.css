@@ -10,7 +10,7 @@
 .CardLogin{
     margin-top: -60px;
     width: 300px;
-    height: 190px;
+    height: 230px;
     padding: 20px;
     border-radius: 15px;
     box-shadow: -5px 5px 5px black;
@@ -30,7 +30,7 @@
 }
 
 .ButtonSignUp{
-    
+    margin-bottom: 20px;
 }
 
 .ButtonLogin{

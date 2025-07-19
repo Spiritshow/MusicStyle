@@ -5,12 +5,12 @@ import { useNavigate } from "react-router";
 
 
 
-const CardButton: FC<ICardButton> = ({img, text, count}) => {
+const CardButton: FC<ICardButton> = ({img, text, count, path}) => {
     
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate(`/PageCategory/${text}`);
+        navigate(`${path}`);
     }
     
     return(

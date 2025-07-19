@@ -11,8 +11,8 @@ interface RequestProducts {
 
 export const RequestProducts = async ({subcategory, setProducts}: RequestProducts ) => {
     try {
-        const res = await axios.get<ICardProduct[]>(`http://localhost:3000/products/${subcategory}`)
-        setProducts(res.data);
+        await axios.get<ICardProduct[]>(`http://localhost:3000/products/${subcategory}`)
+        .then((res) => setProducts(res.data));
     } catch (error) {
         if(axios.isAxiosError(error)){
             alert(error.response?.data);

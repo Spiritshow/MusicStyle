@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import PopCategory from "./components/PopCategory/PopCategory";
 import Brends from "./components/Brends/Brends";
-
+import "./Main.css";
 
 
 const Main: FC = () => {

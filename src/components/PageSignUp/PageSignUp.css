@@ -1,6 +1,6 @@
 .DivPageSignUp{
-    overflow: hidden;
-    height: 91vh;
+    overflow: auto;
+    height: 100%;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -8,6 +8,7 @@
 
 .PageSignUp{
     width: 380px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     padding: 20px;

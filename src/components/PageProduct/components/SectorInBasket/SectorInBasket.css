@@ -3,6 +3,7 @@
     border-radius: 25px;
     width: 100%;
     max-width: 358px;
+    height: 100%;
     padding: 20px;
 }
 
@@ -12,7 +13,7 @@
     width: 100%;
     padding: 20px;
     background-color: rgb(191, 196, 202);
-    max-height: 145px;
+    height: auto;
     border-radius: 15px;
 }
 

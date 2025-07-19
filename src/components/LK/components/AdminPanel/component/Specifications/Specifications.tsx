@@ -85,7 +85,7 @@ const Specifications = ({selectSubcategory, specs, setSpecs}: ISpecifications) =
                         <option value="">Выберите значение</option>
                         <option key="0" value="0">Другое значение</option>
                         {allSpecs[nameSpec.name_db] && allSpecs[nameSpec.name_db].map((specValue) => (
-                            <option key={specValue.id} value={specValue.name}>{specValue.name}</option>
+                            <option key={specValue.id} value={specValue.id}>{specValue.name}</option>
                         ))}
                     </select>
                     {customFields[nameSpec.name_db] && (

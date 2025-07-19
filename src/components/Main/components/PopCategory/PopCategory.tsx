@@ -21,7 +21,7 @@ const PopCategory: FC = () => {
                 Популярные категории
             </div>
             <div className="DivListCategory">
-                <ListPopCategory item={categories} renderItem={(category: ICategory) => <CardButton key={category.id} img={category.img} text={category.text} count={category.count}/> }/>
+                <ListPopCategory item={categories} renderItem={(category: ICategory) => <CardButton key={category.id} img={category.img} text={category.text} count={category.count} path={category.path}/> }/>
             </div>
         </div>
     )

@@ -34,8 +34,8 @@ const SidebarLK = ({controlSidebar,setControlSidebar}: ISidebarLK) => {
             onClick={handleClickSidebarLK}>Личная информация</button>
             <button name="HistoryBuy" className={`ButtonSidebarLK ${controlSidebar == "HistoryBuy"? "active" : ""}`} 
             onClick={handleClickSidebarLK}>История покупок</button>
-            <button name="AdminPanel" className={`ButtonSidebarLK ${controlSidebar == "AdminPanel"? "active" : ""}`}
-            onClick={handleClickSidebarLK}>Панель админа</button>
+            {isAdmin && <button name="AdminPanel" className={`ButtonSidebarLK ${controlSidebar == "AdminPanel"? "active" : ""}`}
+            onClick={handleClickSidebarLK}>Панель админа</button>}
             <button name="Exit" className={`ButtonSidebarLK`} onClick={handleClickExit}>Выйти</button>
         </div>
     )

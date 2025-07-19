@@ -4,6 +4,7 @@ export interface ICardButton {
     img: string,
     text: string,
     count: number;
+    path: string
 }
 
 export interface ICategory {
@@ -12,7 +13,6 @@ export interface ICategory {
     text: string,
     path: string,
     count: number;
-    types: ITypes[]
 }
 
 export interface ITypes {
