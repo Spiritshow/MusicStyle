@@ -10,6 +10,8 @@ import GuardRoute from "./GuardRouter";
 import PageLogin from "../components/PageLogin/PageLogin";
 import PageSignUp from "../components/PageSignUp/PageSignUp";
 import PageBasket from "../components/PageBasket/PageBasket";
+import ConfirmPaymentPage from "../components/PageBasket/components/CardBuy/components/PageConfirmPayment/PageConfirmPayment";
+import SuccessPage from "../components/PageBasket/components/CardBuy/components/PageConfirmPayment/components/PageSuccess/SuccessPage";
 
 
 export interface Context{
@@ -66,6 +68,8 @@ const Router = () => {
                         <Route path="/signUp" element={<PageSignUp/>}/>
                         <Route path="/basket" element={<GuardRoute element={<PageBasket/>}/>}/>
                     </Route>
+                    <Route path="/confirm" element={<ConfirmPaymentPage/>}/>
+                    <Route path="/success" element={<SuccessPage/>}/>
                 </Routes>
             </BrowserRouter>
         </ThemeContext.Provider>

@@ -1,14 +1,12 @@
+import ButtonInProduct from "../../../PageProducts/component/CardProduct/components/ButtonInProduct";
 import "./SectorInBasket.css";
 
 
 const SectorInBasket = ({id, price, name}:{id: number | undefined, price: number | undefined, name: string | undefined}) => {
-    
-    const handleClick = () =>{
-        console.log(id); /*запрос добавить в корзину */
-    }
+
 
     return(
-        <div className="DivSectorInBasket">
+        id && <div className="DivSectorInBasket">
             <div className="CardInBasket">
                 <div className="TextNameProduct">
                     {name}
@@ -17,7 +15,7 @@ const SectorInBasket = ({id, price, name}:{id: number | undefined, price: number
                     {price}₽
                 </div>
                 <div className="DivButtonInBasket">
-                    {id && <button onClick={handleClick} className="ButtonInBasket">В корзину</button>}
+                    <ButtonInProduct id_product={id}/>
                 </div>
             </div>
         </div>

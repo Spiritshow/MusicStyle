@@ -1,0 +1,22 @@
+.ConfirmPaymentPage{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.DivConfirmPayment{
+    width: 310;
+    padding: 10px;
+    background-color: rgb(225, 253, 253);
+    border-radius: 18px;
+}
+
+.TextConfirmPayment{
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(78, 78, 78);
+}

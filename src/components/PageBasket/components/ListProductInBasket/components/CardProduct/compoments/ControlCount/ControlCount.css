@@ -1,0 +1,15 @@
+.DivControlCount{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ButtonControlCount{
+    height: 45px;
+}
+
+input.InputControlCount{
+    height: 30px;
+    font-size: 16px;
+    max-width: 45% ;
+}

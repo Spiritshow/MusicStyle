@@ -5,7 +5,7 @@ import RowSubcategory from "./component/RowSubcategory/RowSubcategory";
 import RowProduct from "./component/RowProduct/RowProduct";
 import Specifications from "./component/Specifications/Specifications";
 import AddImage from "./component/AddImage/AddImage";
-
+import "./AdminPanel.css";
 
 interface INewSpec {
   name: string;

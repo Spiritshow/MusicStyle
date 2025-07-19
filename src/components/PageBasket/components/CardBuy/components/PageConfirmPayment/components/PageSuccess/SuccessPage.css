@@ -1,0 +1,17 @@
+
+.ConfirmPaymentPage{
+
+}
+
+.DivConfirmPayment{
+
+}
+
+.ButtonSuccessPage{
+    margin-top: 20px;
+    width: 100%;
+    background-color: aqua;
+    border-color: rgb(0, 183, 183);
+    border-width: 2px;
+    color: rgb(1, 95, 95);
+}

@@ -1,10 +1,11 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import getPositionsInBasket from "./components/helpers/getPositionsInBasket";
 import ListProductInBasket from "./components/ListProductInBasket/ListProductInBasket";
 import CardProduct from "./components/ListProductInBasket/components/CardProduct/CardProduct";
 import CardBuy from "./components/CardBuy/CardBuy";
 import AllCleaning from "./components/helpers/AllCleaning";
-
+import "./PageBasket.css";
+import { ThemeContext } from "../../router/router";
 
 
 export interface IPositionBasket{
@@ -26,6 +27,7 @@ export const FlagContext = createContext<ContextFlag>({
 });
 
 const PageBasket = () => {
+    const context = useContext(ThemeContext);
     const [flag, setFlag] = useState<boolean>(true)
     const [positions, setPositions] = useState<IPositionBasket[]>([]);
 
@@ -48,7 +50,7 @@ const PageBasket = () => {
         <div className="DivPageBasket">
             <div className="SectorListPosition">
                 <div className="ButtonPageBasket">
-                    <button onClick={handleClickAllCleaning} className="ButtonAllCleaning">Очистить всю корзину</button>
+                    <button onClick={handleClickAllCleaning} className={`ButtonAllCleaning ButtonCardPosition${context.theme}`}>Очистить всю корзину</button>
                 </div>
                 <ListProductInBasket positions={positions} renderPosition={(position: IPositionBasket) => <CardProduct position={position}/>}/>
             </div>

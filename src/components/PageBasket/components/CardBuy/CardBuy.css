@@ -1,0 +1,60 @@
+.DivCardBuy{
+
+}
+
+.TextHeaderCardBuy{
+    padding: 10px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.HeaderCount{
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.TextCount{
+    text-align: right;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.DivTotalSumBasket{
+    display: flex;
+    flex-direction: column;
+}
+
+.TextTotalSumBasket{
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.ValueTotalSumBasket{
+    text-align: right;
+    padding-right: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.ButtonCardBuy{
+    margin-top: 20px;
+    border-color: black;
+    border-style: ridge;
+    border-width: 1px;
+    font-size: 18px;
+}
+
+.ButtonCardBuylight{
+    background-color: aqua;
+    color: black;
+}
+
+.ButtonCardBuydark{
+    background-color: black;
+    color: aliceblue;
+}

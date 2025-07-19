@@ -1,10 +1,12 @@
 import { useContext, useState, type ChangeEvent } from "react";
 import UpdateCountProduct from "./helpers/UpdateCountProduct";
 import { FlagContext } from "../../../../../../PageBasket";
-
+import "./ControlCount.css";
+import { ThemeContext } from "../../../../../../../../router/router";
 
 
 const ControlCount = ({initCount, id_position}: {initCount: number, id_position: number}) => {
+    const context = useContext(ThemeContext);
     const {flag, setFlag} = useContext(FlagContext);
     const [count, setCount] = useState<number>(initCount)
 
@@ -35,9 +37,9 @@ const ControlCount = ({initCount, id_position}: {initCount: number, id_position:
 
     return(
         <div className="DivControlCount">
-            <button onClick={handleClickDecrement} className="ButtonControlCount">-</button>
+            <button onClick={handleClickDecrement} className={`ButtonControlCount ButtonCardPosition${context.theme}`}>-</button>
             <input type="number" className="InputControlCount" onChange={handleChange} value={count}></input>
-            <button onClick={handleClickIncrement} className="ButtonControlCount">+</button>
+            <button onClick={handleClickIncrement} className={`ButtonControlCount ButtonCardPosition${context.theme}`}>+</button>
         </div>
     )
 }

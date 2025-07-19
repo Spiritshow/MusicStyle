@@ -4,6 +4,7 @@ import axios from "axios";
 import type { IPersonalInfo } from "../../../../Types/Types";
 import CompChangePassword from "./components/CompChangePassword/CompChangePassword";
 import CompEditPersonalInfo from "./components/CompEditPersonalInfo/CompEditPersonalInfo";
+import TranslateUserInfo from "./helper/translate";
 
 
 const PersonalInfo = () => {
@@ -64,7 +65,7 @@ const PersonalInfo = () => {
                         else{ 
                             return(     
                                 <div key={key} className="RowInfo">
-                                    <div className="KeyInfo"><strong>{key}:</strong></div> 
+                                    <div className="KeyInfo"><strong>{TranslateUserInfo(key)}:</strong></div> 
                                     <div className="ValueInfo">{value instanceof Date ? value.toLocaleDateString() : value.toString()}</div>
                                 </div>
                             )

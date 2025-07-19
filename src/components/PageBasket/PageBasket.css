@@ -1,0 +1,40 @@
+.DivPageBasket{
+    display: flex;
+    flex-direction: row;
+    width: 99vw;
+    height: 90vh;
+}
+
+.SectorListPosition{
+    width: 100%;
+    padding: 10px;
+}
+
+.ButtonPageBasket{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.ButtonAllCleaning{
+    background-color: aliceblue;
+}
+
+.ButtonCardPositionlight{
+
+}
+
+.ButtonCardPositiondark{
+    filter: invert();
+}
+
+.SectorCardBuy{
+    width: 340px;
+    padding: 20px;
+    border-color: gray;
+    border-left: 2px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-style: ridge;
+}
